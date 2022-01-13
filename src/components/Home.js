@@ -8,7 +8,7 @@ import HeroImage from "./HeroImage";
 import Grid from "./Grid";
 
 //hook
-import { useHomeFetch } from "./hooks/useHomeFetch";
+import { useHomeFetch } from "../hooks/useHomeFetch";
 
 //image
 import Img404 from '../images/no_image.jpg'
