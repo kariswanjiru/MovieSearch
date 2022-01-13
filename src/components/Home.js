@@ -4,8 +4,9 @@ import react, { useState,useEffect } from "react";
 import {POSTER_SIZE,BACKDROP_SIZE , IMAGE_BASE_URL, API_KEY} from '../config'
 
 //components
-import HeroImage from "./HeroImage";
-import Grid from "./Grid";
+import HeroImage from './HeroImage';
+import Grid from './Grid';
+import Thumb from './Thumbs'
 
 //hook
 import { useHomeFetch } from "../hooks/useHomeFetch";
@@ -30,7 +31,16 @@ const Home= () => {
 }  
     <Grid header='Popular Movies'>
         {state.results.map(movie => (
-            <div key={movie.id}>{movie.title}</div>
+            <Thumb 
+            key={movie.id}
+            clickable
+            image={
+                movie.poster_path
+                ?IMAGE_BASE_URL + POSTER_SIZE+ movie.poster_path
+                :Img404
+            }
+            movieId = {movie.id}
+            />
         ))}
     </Grid>
     </>
