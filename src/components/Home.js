@@ -20,8 +20,8 @@ const Home= () => {
 
     console.log(state);
     return (
-    <>
-    {state.results[0] ?
+        <>
+{state.results[0] ?
     <HeroImage
         image={`${IMAGE_BASE_URL}&{BACKDROP_SIZE}&{state.results[0].backdrop_path}`}
         title={state.results[0].oriinal_title}
@@ -44,9 +44,8 @@ const Home= () => {
         ))}
     </Grid>
     </>
-    
-    
     );
 };
 
 export default Home;
+
