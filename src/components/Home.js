@@ -1,4 +1,4 @@
-import react, { useState,useEffect } from "react";
+import React from "react";
 
 //config
 import {POSTER_SIZE,BACKDROP_SIZE , IMAGE_BASE_URL, API_KEY} from '../config'
@@ -7,9 +7,10 @@ import {POSTER_SIZE,BACKDROP_SIZE , IMAGE_BASE_URL, API_KEY} from '../config'
 import HeroImage from './HeroImage';
 import Grid from './Grid';
 import Thumb from './Thumbs'
+import { Spinner } from "./Spinner";
 
 //hook
-import { useHomeFetch } from "../hooks/useHomeFetch";
+import { useHomeFetch } from '../hooks/useHomeFetch'
 
 //image
 import Img404 from '../images/no_image.jpg'
@@ -26,8 +27,7 @@ const Home= () => {
         image={`${IMAGE_BASE_URL}&{BACKDROP_SIZE}&{state.results[0].backdrop_path}`}
         title={state.results[0].oriinal_title}
         text={state.results[0].overview}
-    />
-    : null
+    />: null
 }  
     <Grid header='Popular Movies'>
         {state.results.map(movie => (
@@ -43,6 +43,7 @@ const Home= () => {
             />
         ))}
     </Grid>
+    <Spinner/>
     </>
     );
 };
