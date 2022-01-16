@@ -1,13 +1,13 @@
 import React from "react";
 
 //config
-import {POSTER_SIZE,BACKDROP_SIZE , IMAGE_BASE_URL, API_KEY} from '../config'
+import {POSTER_SIZE,BACKDROP_SIZE ,IMAGE_BASE_URL} from '../config'
 
 //components
 import HeroImage from './HeroImage';
 import Grid from './Grid';
 import Thumb from './Thumbs'
-import { Spinner } from "./Spinner";
+import Spinner from "./Spinner";
 
 //hook
 import { useHomeFetch } from '../hooks/useHomeFetch'
@@ -24,7 +24,7 @@ const Home= () => {
         <>
 {state.results[0] ?
     <HeroImage
-        image={`${IMAGE_BASE_URL}&{BACKDROP_SIZE}&{state.results[0].backdrop_path}`}
+        image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
         title={state.results[0].oriinal_title}
         text={state.results[0].overview}
     />: null

@@ -19,7 +19,7 @@ export const useHomeFetch = () =>{
     const fetchMovies = async(page,searchTerm='')=>{
         try{
             setError(false)
-            setLoading(false)
+            setLoading(true)
 
             const movies =  await API.fetchMovies(searchTerm,page);
             console.log(movies);
@@ -29,15 +29,16 @@ export const useHomeFetch = () =>{
                     page>1 ?[...prev.results,...movies.results] :[...movies.results]
             }))
         }catch(error){
-            setError(true)
+            setError(true);
         }
-    }
+        setLoading(false);
+    };
 
     //initial render 
     useEffect(() => {
         fetchMovies(1)
     },[]);
 
-    return{state,loading,error}
+    return{state,loading,error};
     
 };
