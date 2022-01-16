@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 export const  Image = styled.img`
-    width: 100px;
-    maax-width:720px;
+    width: 200px;
+    max-width:720px;
     transition:all 0.3s;
     object-fit:cover;
-    border-radius:20px;
+    border-radius:35px;
     animation:animateaThumb 0.5s;
 
     :hover{
-        opacity:0.8;
+        opacity:0.7;
+        /*Added some interactivity with the thumbs*/
+        width:220px;
     }
 
     @keyframes animateThumb {
