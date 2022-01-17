@@ -18,7 +18,6 @@ export const useHomeFetch = () =>{
     const [error,setError]=useState(false);
 
 
-
     const fetchMovies = async(page,searchTerm='')=>{
         try{
             setError(false)
