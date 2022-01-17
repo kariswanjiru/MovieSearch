@@ -50,7 +50,7 @@ const Home= () => {
     </Grid>
     {loading && <Spinner />}
     {state.page < state.total_pages && !loading && (
-        <Button text='Load More' callBack={()=> setIsLoadingMore(true)}/>
+        <Button text='Load More' callBack={()=> setIsLoadingMore(true)}  />
     )}
     </>
     );
