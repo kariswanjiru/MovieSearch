@@ -38,7 +38,7 @@ export const Text = styled.div`
         bottom:40px;
         margin-right:20px;
         min-height:100px;
-        color:var(--white);
+        color:var(--darkGrey);
 
         h1{
             font-size:var(--fontSuperBig)
