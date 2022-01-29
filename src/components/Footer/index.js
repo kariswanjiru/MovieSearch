@@ -10,3 +10,5 @@ const Footer = ({socialIcons}) => {
         </Content>
     </Wrapper>
 }
+
+export default Footer;
