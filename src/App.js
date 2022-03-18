@@ -15,7 +15,7 @@ function App() {
       <Header/>
      <Home/>
       <GlobalStyle/>
-      <Footer/>
+      
     </div>
   )
 }
