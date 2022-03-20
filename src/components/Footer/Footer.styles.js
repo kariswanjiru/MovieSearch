@@ -6,13 +6,18 @@ export const Wrapper = styled.div`
 
 `;
 
-export const Content = styled.img`
-    display:flex;
+export const Content = styled.div`
+display:flex;
+align-items:center;
+Justify-content:space-between;
+max-width:var(--maxWidth);
+padding: 20px 0;
+margin:0 auto;
 
 
 `;
 
-export const Image = styled.img`
+export const insta = styled.img`
     border-raduis:50%;
 
 `;

@@ -1,8 +1,8 @@
 import React from 'react';
+import Footer from './components/Footer';
 //components 
 import Header from './components/Header';
 import Home from './components/Home';
-//import Footer from './components/Footer'
 
 //Styles
 import { GlobalStyle } from './GlobalStyle';
@@ -15,7 +15,7 @@ function App() {
       <Header/>
      <Home/>
       <GlobalStyle/>
-      
+      <Footer/>
     </div>
   )
 }
